@@ -5,8 +5,12 @@ using namespace std;
 
 #define int long long
 #define all(x) (x).begin(), (x).end()
+#define endl '\n'
 
-int32_t main() {
+signed main() {
     fastio();
-    
+    int tc; cin >> tc;
+    while (tc--) {
+        
+    }
 }
