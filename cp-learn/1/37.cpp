@@ -7,6 +7,19 @@ using namespace std;
 #define all(x) (x).begin(), (x).end()
 #define endl '\n'
 
+bool checkpali(int& k, string& s) {
+    int count = k;
+    int i=0;
+    int j=s.length()-1;
+    while(count > 0) {
+        if(s[i] != s[j]) return false;
+        i++;
+        j--;
+        count--;
+    }
+    return true;
+}
+
 signed main() {
     fastio();
     int tc; cin >> tc;
@@ -16,10 +29,10 @@ signed main() {
         cin>>n;
         cin>>k;
         cin>>s;
-        if(k == 0) {
-            cout<<"yes"<<endl;
-        } else if() {
-            
+        if(n >= 2*k + 1 && checkpali(k, s)) {
+            cout<<"YES"<<endl;
+        } else {
+            cout<<"NO"<<endl;
         }
     }
 }
