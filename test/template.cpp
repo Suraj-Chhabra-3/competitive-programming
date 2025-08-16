@@ -7,6 +7,8 @@ using namespace std;
 #define all(x) (x).begin(), (x).end()
 #define endl '\n'
 
+const int MOD = 1e9 + 7;
+
 signed main() {
     fastio();
     int tc; cin >> tc;

@@ -10,7 +10,17 @@ using namespace std;
 signed main() {
     fastio();
     int tc; cin >> tc;
-    while (tc--) {
-        
+    while (tc--) {   
+        int n; int k;
+        cin>>n; cin>>k;
+        if(k*k > n) {
+            cout<<"NO"<<endl;
+        } else if((k%2 == 1) && (n % 2 == 1)) {
+            cout<<"YES"<<endl;
+        } else if((k%2 == 0) && (n % 2 == 0)) {
+            cout<<"YES"<<endl;
+        } else {
+            cout<<"NO"<<endl;
+        }
     }
 }
