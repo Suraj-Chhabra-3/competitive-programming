@@ -16,24 +16,12 @@ signed main() {
         int n; cin>>n;
         vector<int>v(n);
         for(int i=0; i<n; i++) cin>>v[i];
+        map<int, int>mpp;
         int ans = 0;
-        int tosmall = v[n-1];
-        int i=n-2;
-        while(i >= 0) {
-            if(tosmall == 0) {
-                ans = -1;
-                break;
-            }
-            if(tosmall == 1 && i > 0) {
-                ans = -1;
-                break;
-            }
-            while(v[i] >= tosmall && v[i] != 0) {
-                v[i] = v[i]/2;
-                ans++;
-            }
-            tosmall = v[i];
-            i--;
+        for(int i=0; i<n; i++) {
+            int curr = v[i] - i;
+            ans = ans + (mpp[curr]);
+            mpp[curr]++;
         }
         cout<<ans<<endl;
     }
