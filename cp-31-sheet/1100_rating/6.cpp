@@ -9,6 +9,14 @@ using namespace std;
 
 const int MOD = 1e9 + 7;
 
+void solve(vector<int>& a, int ele) {
+    for(auto& itr : a) {
+        if(itr % ele == 0) {
+            itr = itr + ele/2;
+        }
+    }
+}
+
 signed main() {
     fastio();
     int tc; cin >> tc;
@@ -18,6 +26,15 @@ signed main() {
         for(int i=0; i<n; i++) cin>>a[i];
         vector<int>x(q);
         for(int i=0; i<q; i++) cin>>x[i];
-        
+        int maxi = *max_element(all(a));
+
+        for(auto it : x) {
+            int ele = pow(2, it);
+            if(ele <= maxi) solve(a, ele);
+        }
+        for(auto it : a) {
+            cout<<it<<" ";
+        }
+        cout<<endl;
     }
 }
