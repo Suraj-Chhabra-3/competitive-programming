@@ -10,9 +10,8 @@ int32_t main() {
     fastio();
     string s;
     string t;
-    cin>>s;
     stringstream X(s);
-    while(getline(X, t, '.')) {
+    while(getline(X, t, ' ')) {
         cout<<t<<endl;
     }
 }
